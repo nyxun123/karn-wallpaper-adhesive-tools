@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallpaper Adhesive Mixing Ratio Calculator & Sample Test Record</title>
+    <meta
+      name="description"
+      content="Free browser-based calculator for wallpaper adhesive powder-to-water ratios, plus a printable sample testing and batch comparison record."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://nyxun123.github.io/karn-wallpaper-adhesive-tools/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Wallpaper Adhesive Mixing Ratio Calculator & Sample Test Record" />
+    <meta
+      property="og:description"
+      content="Calculate water quantity from a product-specific powder ratio and print a repeatable wallpaper adhesive sample test record."
+    />
+    <meta property="og:url" content="https://nyxun123.github.io/karn-wallpaper-adhesive-tools/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Wallpaper Adhesive Mixing Ratio Calculator" />
+    <meta
+      name="twitter:description"
+      content="A free, private-in-browser calculator and printable sample test record for wallpaper adhesive powder."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Wallpaper Adhesive Mixing Ratio Calculator & Sample Test Record",
+        "url": "https://nyxun123.github.io/karn-wallpaper-adhesive-tools/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "description": "A free browser-based calculator for product-specific wallpaper adhesive powder-to-water ratios with a printable sample testing and batch comparison record.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Hangzhou Karn New Building Materials Co., Ltd.",
+          "url": "https://kn-wallpaperglue.com/en/"
+        }
+      }
+    </script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="https://kn-wallpaperglue.com/en/" rel="noopener">KARN Technical Tools</a>
+      <nav aria-label="Primary navigation">
+        <a href="#calculator">Calculator</a>
+        <a href="#test-record">Test record</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">Free browser-based worksheet</p>
+        <h1 id="page-title">Wallpaper Adhesive Mixing Ratio Calculator & Sample Test Record</h1>
+        <p class="lede">
+          Calculate water quantity from the ratio stated on a product label or technical data sheet, then record the
+          conditions needed for a repeatable sample comparison. Calculations stay in your browser and are not sent to a
+          server.
+        </p>
+        <div class="notice" role="note">
+          <strong>Important:</strong> This tool does not recommend a mixing ratio. Enter only the ratio supplied for the
+          exact product being tested and confirm it with the current label or technical document.
+        </div>
+      </section>
+
+      <section id="calculator" class="panel" aria-labelledby="calculator-title">
+        <div class="section-heading">
+          <p class="eyebrow">Step 1</p>
+          <h2 id="calculator-title">Calculate the test quantity</h2>
+          <p>For a 1:N powder-to-water ratio, enter the powder mass and N shown in the product instructions.</p>
+        </div>
+
+        <form id="ratio-form" class="calculator-grid">
+          <label>
+            Powder mass
+            <span class="input-with-unit">
+              <input id="powder-mass" name="powderMass" type="number" min="0.1" step="0.1" value="100" required />
+              <span>g</span>
+            </span>
+          </label>
+          <label>
+            Water parts (N in 1:N)
+            <span class="input-with-unit">
+              <input id="water-ratio" name="waterRatio" type="number" min="0.1" step="0.1" value="25" required />
+              <span>parts</span>
+            </span>
+          </label>
+          <button type="submit">Calculate</button>
+        </form>
+
+        <div id="calculation-result" class="result-grid" aria-live="polite">
+          <div>
+            <span class="result-label">Water required</span>
+            <strong id="water-result">2.500 kg</strong>
+          </div>
+          <div>
+            <span class="result-label">Total mixture mass</span>
+            <strong id="total-result">2.600 kg</strong>
+          </div>
+          <div>
+            <span class="result-label">Entered ratio</span>
+            <strong id="ratio-result">1:25</strong>
+          </div>
+        </div>
+        <p id="calculation-error" class="error" role="alert" hidden></p>
+      </section>
+
+      <section id="test-record" class="panel" aria-labelledby="record-title">
+        <div class="section-heading">
+          <p class="eyebrow">Step 2</p>
+          <h2 id="record-title">Record the sample test conditions</h2>
+          <p>Matched conditions make supplier, batch, and complaint comparisons easier to interpret.</p>
+        </div>
+
+        <form id="test-record-form" class="record-grid">
+          <label>Supplier / brand<input type="text" name="supplier" autocomplete="organization" /></label>
+          <label>Product / formula reference<input type="text" name="product" /></label>
+          <label>Batch / lot number<input type="text" name="batch" /></label>
+          <label>Test date<input type="date" name="testDate" /></label>
+          <label>Water temperature (°C)<input type="number" name="waterTemperature" step="0.1" /></label>
+          <label>Mixing time (minutes)<input type="number" name="mixingTime" min="0" step="0.1" /></label>
+          <label>Rest time (minutes)<input type="number" name="restTime" min="0" step="0.1" /></label>
+          <label>Observation time<input type="time" name="observationTime" /></label>
+          <label class="full-width">
+            Wallpaper and wall-surface condition
+            <textarea name="surfaceCondition" rows="3"></textarea>
+          </label>
+          <label class="full-width">
+            Dissolution, lumping, workability, and other observations
+            <textarea name="observations" rows="5"></textarea>
+          </label>
+          <label class="full-width">
+            Decision and required follow-up
+            <textarea name="decision" rows="3"></textarea>
+          </label>
+        </form>
+
+        <div class="checklist" aria-labelledby="checklist-title">
+          <h3 id="checklist-title">Before comparing two samples</h3>
+          <label><input type="checkbox" /> Same powder mass and water ratio</label>
+          <label><input type="checkbox" /> Same water source and measured temperature</label>
+          <label><input type="checkbox" /> Same addition order, mixing method, and mixing time</label>
+          <label><input type="checkbox" /> Same rest time and observation time</label>
+          <label><input type="checkbox" /> Samples identified by product and batch</label>
+        </div>
+
+        <div class="actions">
+          <button id="print-record" type="button">Print or save as PDF</button>
+          <button id="clear-record" class="secondary" type="button">Clear record</button>
+        </div>
+      </section>
+
+      <section class="panel guide" aria-labelledby="interpretation-title">
+        <div class="section-heading">
+          <p class="eyebrow">Step 3</p>
+          <h2 id="interpretation-title">Interpret results without changing variables</h2>
+        </div>
+        <ol>
+          <li>Confirm the exact product, batch, and current document revision before testing.</li>
+          <li>Change only one test variable at a time when investigating a difference.</li>
+          <li>Compare complaint material with an unopened or retained sample under matched conditions.</li>
+          <li>Record observations rather than relying only on a photograph of the final mixture.</li>
+          <li>Ask the supplier for clarification when the label, TDS, SDS, or COA references do not match.</li>
+        </ol>
+      </section>
+
+      <section id="resources" class="resources" aria-labelledby="resources-title">
+        <div class="section-heading">
+          <p class="eyebrow">Manufacturer resources</p>
+          <h2 id="resources-title">Continue with product-specific information</h2>
+        </div>
+        <div class="resource-grid">
+          <a href="https://kn-wallpaperglue.com/en/products/wallpaper-adhesive/" rel="noopener">
+            <strong>Wallpaper adhesive product overview</strong>
+            <span>Review formats, application context, and the sample inquiry route.</span>
+          </a>
+          <a href="https://kn-wallpaperglue.com/en/products/bulk-wallpaper-adhesive/" rel="noopener">
+            <strong>20 kg bulk supply guide</strong>
+            <span>Check bulk-bag, repacking, document, and quotation considerations.</span>
+          </a>
+          <a href="https://kn-wallpaperglue.com/en/technical-documents/wallpaper-adhesive/" rel="noopener">
+            <strong>TDS / SDS / COA workflow</strong>
+            <span>Understand document roles and product- or batch-specific checks.</span>
+          </a>
+          <a href="https://kn-wallpaperglue.com/en/oem/" rel="noopener">
+            <strong>OEM and private-label workflow</strong>
+            <span>Review pack-size, artwork, sample, and approval stages.</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Published by
+        <a href="https://kn-wallpaperglue.com/en/" rel="noopener">Hangzhou Karn New Building Materials Co., Ltd.</a>
+      </p>
+      <p>This educational tool does not replace product-specific instructions, workplace safety procedures, or local regulations.</p>
+    </footer>
+  </body>
+</html>
