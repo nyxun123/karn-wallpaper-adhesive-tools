@@ -20,7 +20,9 @@ function calculate(event) {
   const waterRatio = Number.parseFloat(waterRatioInput.value);
 
   if (!Number.isFinite(powderMass) || powderMass <= 0 || !Number.isFinite(waterRatio) || waterRatio <= 0) {
-    calculationError.textContent = 'Enter positive numbers for powder mass and water parts.';
+    calculationError.textContent = document.documentElement.lang === 'ru'
+      ? 'Введите положительные значения массы порошка и частей воды.'
+      : 'Enter positive numbers for powder mass and water parts.';
     calculationError.hidden = false;
     return;
   }

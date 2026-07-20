@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор пропорции обойного клея и протокол проверки образца | KARN</title>
+    <meta name="description" content="Бесплатный калькулятор пропорции порошкового обойного клея и печатный протокол проверки образца. Используйте только соотношение с этикетки или TDS конкретного продукта." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://nyxun123.github.io/karn-wallpaper-adhesive-tools/ru/" />
+    <link rel="alternate" hreflang="en" href="https://nyxun123.github.io/karn-wallpaper-adhesive-tools/" />
+    <link rel="alternate" hreflang="ru" href="https://nyxun123.github.io/karn-wallpaper-adhesive-tools/ru/" />
+    <link rel="alternate" hreflang="x-default" href="https://nyxun123.github.io/karn-wallpaper-adhesive-tools/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Калькулятор пропорции обойного клея | KARN" />
+    <meta property="og:description" content="Расчёт воды по пропорции порошка и повторяемый протокол проверки образца." />
+    <meta property="og:url" content="https://nyxun123.github.io/karn-wallpaper-adhesive-tools/ru/" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Калькулятор пропорции обойного клея и протокол проверки образца",
+        "url": "https://nyxun123.github.io/karn-wallpaper-adhesive-tools/ru/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "description": "Браузерный калькулятор по соотношению порошка и воды из этикетки или TDS конкретного обойного клея.",
+        "inLanguage": "ru",
+        "isPartOf": { "@id": "https://nyxun123.github.io/karn-wallpaper-adhesive-tools/#website" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Hangzhou Karn New Building Materials Co., Ltd.",
+          "url": "https://kn-wallpaperglue.com/ru/"
+        }
+      }
+    </script>
+    <script src="../app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="https://kn-wallpaperglue.com/ru/" rel="noopener">KARN Technical Tools</a>
+      <nav aria-label="Основная навигация">
+        <a href="#calculator">Калькулятор</a>
+        <a href="#test-record">Протокол</a>
+        <a href="#resources">Ресурсы</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">Бесплатный браузерный лист проверки</p>
+        <h1 id="page-title">Калькулятор пропорции порошкового обойного клея и протокол проверки образца</h1>
+        <p class="lede">Рассчитайте количество воды по пропорции на этикетке или в техническом документе, затем запишите условия повторяемой проверки образца. Расчёты выполняются в браузере и не отправляются на сервер.</p>
+        <div class="notice" role="note"><strong>Важно:</strong> инструмент не назначает универсальную пропорцию. Введите только соотношение для проверяемого продукта и сверьте его с актуальной этикеткой или TDS.</div>
+      </section>
+
+      <section id="calculator" class="panel" aria-labelledby="calculator-title">
+        <div class="section-heading"><p class="eyebrow">Шаг 1</p><h2 id="calculator-title">Рассчитать количество для теста</h2><p>Для пропорции порошок:вода 1:N введите массу порошка и число N из инструкции продукта.</p></div>
+        <form id="ratio-form" class="calculator-grid">
+          <label>Масса порошка<span class="input-with-unit"><input id="powder-mass" name="powderMass" type="number" min="0.1" step="0.1" value="100" required /><span>г</span></span></label>
+          <label>Части воды (N в 1:N)<span class="input-with-unit"><input id="water-ratio" name="waterRatio" type="number" min="0.1" step="0.1" value="25" required /><span>частей</span></span></label>
+          <button type="submit">Рассчитать</button>
+        </form>
+        <div id="calculation-result" class="result-grid" aria-live="polite"><div><span class="result-label">Воды требуется</span><strong id="water-result">2.500 kg</strong></div><div><span class="result-label">Общая масса смеси</span><strong id="total-result">2.600 kg</strong></div><div><span class="result-label">Введённая пропорция</span><strong id="ratio-result">1:25</strong></div></div>
+        <p id="calculation-error" class="error" role="alert" hidden></p>
+      </section>
+
+      <section id="test-record" class="panel" aria-labelledby="record-title">
+        <div class="section-heading"><p class="eyebrow">Шаг 2</p><h2 id="record-title">Записать условия проверки образца</h2><p>Одинаковые условия помогают сравнивать поставщика, партию и рекламацию.</p></div>
+        <form id="test-record-form" class="record-grid">
+          <label>Поставщик / бренд<input type="text" name="supplier" autocomplete="organization" /></label>
+          <label>Продукт / формула<input type="text" name="product" /></label>
+          <label>Партия / lot<input type="text" name="batch" /></label>
+          <label>Дата проверки<input type="date" name="testDate" /></label>
+          <label>Температура воды (°C)<input type="number" name="waterTemperature" step="0.1" /></label>
+          <label>Время перемешивания (мин)<input type="number" name="mixingTime" min="0" step="0.1" /></label>
+          <label>Время набухания (мин)<input type="number" name="restTime" min="0" step="0.1" /></label>
+          <label>Время наблюдения<input type="time" name="observationTime" /></label>
+          <label class="full-width">Обои и состояние поверхности<textarea name="surfaceCondition" rows="3"></textarea></label>
+          <label class="full-width">Растворение, комки, рабочая консистенция и другие наблюдения<textarea name="observations" rows="5"></textarea></label>
+          <label class="full-width">Решение и дальнейшие действия<textarea name="decision" rows="3"></textarea></label>
+        </form>
+        <div class="checklist" aria-labelledby="checklist-title"><h3 id="checklist-title">Перед сравнением двух образцов</h3><label><input type="checkbox" /> Одинаковые масса порошка и пропорция воды</label><label><input type="checkbox" /> Одинаковые источник и температура воды</label><label><input type="checkbox" /> Одинаковые порядок внесения, метод и время перемешивания</label><label><input type="checkbox" /> Одинаковые время набухания и наблюдения</label><label><input type="checkbox" /> Образцы обозначены продуктом и партией</label></div>
+        <div class="actions"><button id="print-record" type="button">Печать или PDF</button><button id="clear-record" class="secondary" type="button">Очистить протокол</button></div>
+      </section>
+
+      <section class="panel guide" aria-labelledby="interpretation-title"><div class="section-heading"><p class="eyebrow">Шаг 3</p><h2 id="interpretation-title">Интерпретировать результат без смены переменных</h2></div><ol><li>Перед проверкой подтвердите точный продукт, партию и редакцию документа.</li><li>При поиске причины различия меняйте только одну переменную за раз.</li><li>Сравнивайте рекламационный материал с запечатанным или сохранённым образцом в одинаковых условиях.</li><li>Записывайте наблюдения, а не только фотографию готовой смеси.</li><li>Запросите у производителя разъяснение, если этикетка, TDS, SDS или COA не совпадают.</li></ol></section>
+
+      <section id="resources" class="resources" aria-labelledby="resources-title"><div class="section-heading"><p class="eyebrow">Ресурсы производителя</p><h2 id="resources-title">Продолжить с информацией по конкретному продукту</h2></div><div class="resource-grid"><a href="https://kn-wallpaperglue.com/ru/products/wallpaper-adhesive/" rel="noopener"><strong>Обзор порошкового обойного клея</strong><span>Форматы поставки и маршрут запроса образца.</span></a><a href="https://kn-wallpaperglue.com/ru/solutions/wallpaper-adhesive-bulk-russia-cis/" rel="noopener"><strong>Поставки 20 кг оптом</strong><span>Мешки, фасовка, документы и запрос коммерческого предложения.</span></a><a href="https://kn-wallpaperglue.com/ru/solutions/samples-tds-msds-coa-wallpaper-glue-russia/" rel="noopener"><strong>TDS / MSDS / COA и образцы</strong><span>Роли документов и проверка партии перед заказом.</span></a><a href="https://kn-wallpaperglue.com/ru/oem/" rel="noopener"><strong>OEM и private label</strong><span>Фасовка, макет, образец и согласование упаковки.</span></a></div></section>
+    </main>
+    <footer><p>Опубликовано <a href="https://kn-wallpaperglue.com/ru/" rel="noopener">Hangzhou Karn New Building Materials Co., Ltd.</a></p><p>Этот учебный инструмент не заменяет инструкции конкретного продукта, правила безопасности или местные нормы.</p></footer>
+  </body>
+</html>
