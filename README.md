@@ -13,6 +13,8 @@ Public tool: <https://nyxun123.github.io/karn-wallpaper-adhesive-tools/>
 
 Official manufacturer website: <https://kn-wallpaperglue.com/en/>
 
+Russian buyer guides: <https://nyxun123.github.io/ru-wallpaper-glue-buyer-guides/>
+
 ## Local preview
 
 Serve the directory with any static HTTP server, for example:
